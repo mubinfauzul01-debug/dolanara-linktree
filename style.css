@@ -1,0 +1,24 @@
+/* Dolanara Linktree — style.css */
+:root{
+  --card-bg: rgba(255,255,255,0.86);
+  --text: #143a27;
+  --muted: #2d6a4f;
+  --accent: #2b6f44;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;padding:0;font-family:Inter, "Poppins", system-ui, -apple-system;}
+body{display:flex;align-items:center;justify-content:center;background:transparent;color:var(--text);overflow:hidden}
+.scene-wrap{position:fixed;inset:0;z-index:0;pointer-events:none}
+.content{position:relative;z-index:5;width:92%;max-width:420px;margin:20px;padding:26px;border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.82));box-shadow:0 12px 36px rgba(18,40,22,0.12);backdrop-filter:blur(6px) saturate(120%)}
+.brand{display:flex;flex-direction:column;align-items:center}
+.brand-logo{width:110px;height:auto;border-radius:12px;box-shadow:0 6px 18px rgba(20,40,25,0.06)}
+.tagline{margin-top:8px;font-weight:600;color:var(--muted)}
+.title{margin:12px 0 6px;font-size:1.45rem;line-height:1.2;font-weight:700;color:var(--accent)}
+.subtitle{margin:0 0 18px;color:#2f6e50;font-size:0.95rem}
+.links{display:flex;flex-direction:column;gap:12px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:700;color:var(--text);background:var(--card-bg);box-shadow:0 6px 18px rgba(16,36,22,0.06);transition:transform .18s,box-shadow .18s}
+.btn:active{transform:translateY(1px)}
+.btn.disabled{opacity:0.7;pointer-events:none}
+.small{margin-top:16px;color:#386a4f;font-size:0.84rem;text-align:center}
+.watermark{position:fixed;right:14px;bottom:10px;color:rgba(20,40,25,0.6);font-size:0.76rem;z-index:6}
+@media (max-width:420px){.content{padding:18px;margin:12px;border-radius:14px}.title{font-size:1.25rem}}

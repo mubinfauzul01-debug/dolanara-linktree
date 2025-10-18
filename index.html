@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dolanara • Linktree (Final)</title>
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<meta name="description" content="Dolanara — Your Nature Gateway. Staycations & trips in Trawas, Mojokerto." />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="scene-wrap" aria-hidden="true">
+  <svg id="scene" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="grad-day" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#efe6da"/>
+        <stop offset="1" stop-color="#cfead0"/>
+      </linearGradient>
+      <linearGradient id="grad-night" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="#081b2b"/>
+        <stop offset="1" stop-color="#2b2540"/>
+      </linearGradient>
+      <filter id="blur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="6"/>
+      </filter>
+    </defs>
+    <rect id="sky" x="0" y="0" width="1200" height="700" fill="url(#grad-day)"></rect>
+    <g id="mountains-back" transform="translate(0,90)">
+      <path d="M0 480 C220 340 360 420 560 380 C760 340 920 420 1200 380 L1200 700 L0 700 Z" fill="#8fc79f" opacity="0.95"></path>
+    </g>
+    <g id="mountains-mid" transform="translate(0,130)">
+      <path d="M0 500 C180 360 360 430 560 400 C760 370 920 430 1200 390 L1200 700 L0 700 Z" fill="#59a577" opacity="0.98"></path>
+    </g>
+    <g id="foreground" transform="translate(0,190)">
+      <path d="M0 540 C160 440 360 480 540 450 C720 420 900 490 1200 450 L1200 700 L0 700 Z" fill="#2f7f58"></path>
+    </g>
+    <path id="trail" d="M140 560 C260 520 420 540 600 520 C780 500 920 520 1060 500" stroke="#caa67a" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.9"/>
+    <g id="celestial">
+      <circle id="sun" cx="980" cy="120" r="44" fill="#fff3b0" opacity="1"></circle>
+      <circle id="sun-glow" cx="980" cy="120" r="110" fill="#ffe0a8" opacity="0.45" style="filter:url(#blur)"></circle>
+      <g id="moon" opacity="0">
+        <circle cx="980" cy="120" r="34" fill="#f7f3ff"></circle>
+      </g>
+    </g>
+    <g id="clouds" opacity="0.95">
+      <g class="cloud" transform="translate(-200,60)">
+        <ellipse cx="200" cy="80" rx="80" ry="34" fill="#ffffff" opacity="0.9"></ellipse>
+        <ellipse cx="260" cy="74" rx="60" ry="30" fill="#ffffff" opacity="0.86"></ellipse>
+      </g>
+      <g class="cloud" transform="translate(-50,30)">
+        <ellipse cx="200" cy="60" rx="60" ry="26" fill="#ffffff" opacity="0.78"></ellipse>
+      </g>
+      <g class="cloud" transform="translate(-400,140)">
+        <ellipse cx="220" cy="90" rx="100" ry="40" fill="#ffffff" opacity="0.9"></ellipse>
+      </g>
+    </g>
+    <g id="birds" fill="none" stroke="#133a2b" stroke-width="3" stroke-linecap="round">
+      <path d="M150 120 q10 -10 20 0 q10 -10 20 0" class="bird" />
+      <path d="M320 140 q10 -8 20 0 q10 -8 20 0" class="bird" />
+    </g>
+    <g id="walker" transform="translate(140,530)">
+      <g id="walker-body">
+        <circle cx="0" cy="-24" r="6" fill="#113a26"></circle>
+        <rect x="-4" y="-18" width="8" height="18" rx="3" fill="#113a26"></rect>
+        <line x1="0" y1="0" x2="-8" y2="18" stroke="#113a26" stroke-width="3" stroke-linecap="round"></line>
+        <line x1="0" y1="0" x2="8" y2="18" stroke="#113a26" stroke-width="3" stroke-linecap="round"></line>
+      </g>
+    </g>
+    <g id="stars" opacity="0">
+      <circle cx="220" cy="60" r="1.4" fill="#fff9db"></circle>
+      <circle cx="300" cy="40" r="1.6" fill="#fff8e0"></circle>
+      <circle cx="380" cy="80" r="1.2" fill="#fff8e0"></circle>
+      <circle cx="460" cy="50" r="1.8" fill="#fff8e0"></circle>
+    </g>
+  </svg>
+</div>
+
+<div class="content">
+  <div class="brand">
+    <img src="assets/logo-dolanara.png" alt="Dolanara Logo" class="brand-logo" />
+    <div class="tagline">Your Nature Gateway 🌿</div>
+  </div>
+
+  <h1 class="title">Let's Explore with Dolanara</h1>
+  <p class="subtitle">Staycations, family trips & natural moments in Trawas, Mojokerto</p>
+
+  <nav class="links" aria-label="Primary links">
+    <a class="btn" href="https://www.instagram.com/dolanara_id?igsh=MWF2OWE3d2hpcjI1dA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">🌿 Instagram</a>
+    <a class="btn" href="https://www.tiktok.com/@dolanara.id?_t=ZS-90e2A6lsyjy&_r=1" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+    <a class="btn" href="https://wa.me/62881027007831" target="_blank" rel="noopener noreferrer">📞 WhatsApp</a>
+    <a class="btn disabled" href="#" aria-disabled="true">✨ Website (Soon)</a>
+  </nav>
+
+  <footer class="small">© 2025 Dolanara — All rights reserved</footer>
+</div>
+
+<audio id="bgAudio" loop preload="auto">
+  <source src="assets/nature-bgm.mp3" type="audio/mpeg">
+  <source src="assets/nature-bgm.ogg" type="audio/ogg">
+</audio>
+
+<div class="watermark">Dolanara ©2025</div>
+
+<script>
+(function(){
+  const sky = document.getElementById('sky');
+  const sun = document.getElementById('sun');
+  const moon = document.getElementById('moon');
+  const sunGlow = document.getElementById('sun-glow');
+  const stars = document.getElementById('stars');
+  const clouds = document.querySelectorAll('.cloud');
+  const birds = document.querySelectorAll('.bird');
+  const walker = document.getElementById('walker');
+  const bgAudio = document.getElementById('bgAudio');
+
+  document.querySelectorAll('.cloud').forEach((c, i) => {
+    const dur = [40000, 52000, 68000][i] || 50000;
+    c.animate([{ transform: 'translateX(-300px)' }, { transform: 'translateX(1400px)' }], {
+      duration: dur, iterations: Infinity, easing: 'linear', delay: i*2000
+    });
+  });
+  document.querySelectorAll('.bird').forEach((b, i) => {
+    const dur = 22000 + i*6000;
+    b.animate([{ transform: 'translateX(-200px)' }, { transform: 'translateX(1200px)' }], {
+      duration: dur, iterations: Infinity, easing: 'linear', delay: i*1000
+    });
+  });
+
+  walker.animate([{ transform: 'translate(0,0)' }, { transform: 'translate(920px,-8px)' }], {
+    duration: 22000, iterations: Infinity, easing: 'linear'
+  });
+  walker.animate([{ transform: 'translateY(0px)' }, { transform: 'translateY(-6px)' }, { transform: 'translateY(0px)' }], {
+    duration: 900, iterations: Infinity, easing: 'ease-in-out'
+  });
+
+  let isDay = true;
+  function setDay(){
+    sky.setAttribute('fill','url(#grad-day)');
+    if(sun) sun.style.opacity = '1';
+    if(sunGlow) sunGlow.style.opacity = '0.45';
+    if(moon) moon.style.opacity = '0';
+    if(stars) stars.style.opacity = '0';
+  }
+  function setNight(){
+    sky.setAttribute('fill','url(#grad-night)');
+    if(sun) sun.style.opacity = '0';
+    if(sunGlow) sunGlow.style.opacity = '0';
+    if(moon) moon.style.opacity = '1';
+    if(stars) stars.style.opacity = '1';
+  }
+  setDay();
+  setInterval(()=>{ isDay = !isDay; if(isDay) setDay(); else setNight(); }, 30000);
+
+  function startAudio(){
+    if(bgAudio.paused){
+      bgAudio.volume = 0.5;
+      bgAudio.play().catch(()=>{});
+      let vol=0.05; bgAudio.volume=vol;
+      const fade = setInterval(()=>{ vol+=0.02; bgAudio.volume=Math.min(vol,0.5); if(vol>=0.49) clearInterval(fade); }, 300);
+    }
+    document.removeEventListener('click', startAudio);
+    document.removeEventListener('touchstart', startAudio);
+  }
+  document.addEventListener('click', startAudio, {passive:true});
+  document.addEventListener('touchstart', startAudio, {passive:true});
+
+  document.addEventListener('mousemove', (e)=> {
+    const cx = (e.clientX / window.innerWidth - 0.5);
+    document.getElementById('mountains-back').setAttribute('transform', `translate(${cx*8},90)`);
+    document.getElementById('mountains-mid').setAttribute('transform', `translate(${cx*14},130)`);
+    document.getElementById('foreground').setAttribute('transform', `translate(${cx*22},190)`);
+    walker.style.transform = `translate(${cx*6}px,0)`;
+  }, {passive:true});
+
+})();
+</script>
+</body>
+</html>
