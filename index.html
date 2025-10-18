@@ -1,38 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dolanara • Linktree</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Discover staycations, family trips & natural moments in Trawas, Mojokerto with Dolanara. Your Nature Gateway." />
+  <meta name="description" content="Discover staycations, family trips & natural moments in Trawas, Mojokerto with Dolanara." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #b7e4c7, #95d5b2);
+      color: #2d6a4f;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* ==== Dolanara Animated Background Scene ==== */
+    .dolanara-scene {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .dolanara-scene svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: fadeInScene 2s ease-in;
+    }
+
+    @keyframes fadeInScene {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ===== Logo & Text ===== */
+    .logo-wrap {
+      margin-top: 40px;
+    }
+
+    .logo-wrap img {
+      width: 110px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .tagline-small {
+      font-size: 1rem;
+      color: #2d6a4f;
+      margin-bottom: 6px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1b4332;
+      margin: 0 0 8px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #2d6a4f;
+      margin-bottom: 25px;
+    }
+
+    /* ===== Buttons ===== */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 85%;
+      max-width: 360px;
+      margin: 0 auto 40px;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 14px;
+      padding: 14px 16px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #1b4332;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .links a:hover {
+      transform: translateY(-3px);
+      background: #d8f3dc;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #2d6a4f;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    /* === Floating animation for clouds and birds === */
+    @keyframes floatClouds {
+      from { transform: translateX(-200px); }
+      to { transform: translateX(800px); }
+    }
+
+    @keyframes birdFly {
+      from { transform: translateX(-100px) translateY(0px); }
+      to { transform: translateX(900px) translateY(-20px); }
+    }
+
+  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="logo-wrap">
-      <img src="assets/logo-dolanara.png" alt="Dolanara Logo" class="logo" />
-      <div class="tagline-small">Your Nature Gateway 🌿</div>
-    </div>
+  <!-- 🌿 Dolanara Animated Background Scene -->
+  <div class="dolanara-scene">
+    <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#b7e4c7" />
+          <stop offset="100%" stop-color="#95d5b2" />
+        </linearGradient>
+      </defs>
+      <rect width="800" height="400" fill="url(#sky)" />
 
-    <main class="card">
-      <h1 id="main-title" class="lead">Let’s Explore with Dolanara</h1>
-      <p class="lead-sub">
-        Discover staycations, family trips & natural moments in Trawas, Mojokerto.
-      </p>
+      <!-- Clouds -->
+      <g fill="#ffffff" opacity="0.8">
+        <ellipse cx="100" cy="60" rx="40" ry="20">
+          <animateTransform attributeName="transform" type="translate" dur="30s" repeatCount="indefinite" values="-200;800"/>
+        </ellipse>
+        <ellipse cx="300" cy="90" rx="50" ry="25">
+          <animateTransform attributeName="transform" type="translate" dur="40s" repeatCount="indefinite" values="-200;800"/>
+        </ellipse>
+      </g>
 
-      <nav class="links" aria-label="Dolanara Links">
-        <a href="https://www.instagram.com/dolanara_id?igsh=MWF2OWE3d2hpcjI1dA%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer">🌿 Visit Instagram</a>
-        <a href="https://www.tiktok.com/@dolanara.id?_t=ZS-90e2A6lsyjy&_r=1" target="_blank" rel="noopener noreferrer">🎵 Visit TikTok</a>
-        <a href="https://wa.me/6285156564382" target="_blank" rel="noopener noreferrer">📞 Contact via WhatsApp</a>
-        <a href="#" class="disabled">✨ Explore Dolanara</a>
-      </nav>
-    </main>
+      <!-- Mountains -->
+      <path d="M0 300 Q150 180 300 300 T800 300 L800 400 L0 400 Z" fill="#74c69d" opacity="0.8">
+        <animate attributeName="d" dur="12s" repeatCount="indefinite"
+          values="M0 300 Q150 180 300 300 T800 300 L800 400 L0 400 Z;
+                  M0 300 Q150 190 300 290 T800 310 L800 400 L0 400 Z;
+                  M0 300 Q150 180 300 300 T800 300 L800 400 L0 400 Z" />
+      </path>
 
-    <footer>
-      <p>© 2025 Dolanara. All rights reserved.</p>
-    </footer>
+      <!-- Foreground Hill -->
+      <path d="M0 330 Q200 280 400 330 T800 330 L800 400 L0 400 Z" fill="#52b788" opacity="0.9" />
+
+      <!-- Walking Person -->
+      <circle cx="400" cy="310" r="6" fill="#2d6a4f" />
+      <rect x="396" y="316" width="8" height="18" fill="#2d6a4f" />
+      <line x1="400" y1="334" x2="392" y2="350" stroke="#2d6a4f" stroke-width="3">
+        <animate attributeName="x2" values="392;408;392" dur="2s" repeatCount="indefinite"/>
+      </line>
+      <line x1="400" y1="334" x2="408" y2="350" stroke="#2d6a4f" stroke-width="3">
+        <animate attributeName="x2" values="408;392;408" dur="2s" repeatCount="indefinite"/>
+      </line>
+
+      <!-- Birds -->
+      <path d="M200 100 Q210 90 220 100 Q230 90 240 100" stroke="#1b4332" fill="transparent" stroke-width="2">
+        <animateTransform attributeName="transform" type="translate" dur="25s" repeatCount="indefinite" values="-100 0;900 -50"/>
+      </path>
+    </svg>
   </div>
+
+  <!-- Dolanara Main Content -->
+  <div class="logo-wrap">
+    <img src="assets/logo-dolanara.png" alt="Dolanara Logo" />
+    <div class="tagline-small">Your Nature Gateway 🌿</div>
+  </div>
+
+  <main class="card" role="main">
+    <h1>Let’s Explore with Dolanara</h1>
+    <p>Discover staycations, family trips & natural moments in Trawas, Mojokerto.</p>
+
+    <nav class="links" aria-label="Dolanara links">
+      <a href="https://www.instagram.com/dolanara.id" target="_blank" rel="noopener noreferrer">🌿 Visit Instagram</a>
+      <a href="https://www.tiktok.com/@dolanara.id" target="_blank" rel="noopener noreferrer">🎵 Visit TikTok</a>
+      <a href="https://wa.me/62881027007831" target="_blank" rel="noopener noreferrer">📞 Contact via WhatsApp</a>
+      <a href="#" target="_blank" rel="noopener noreferrer">✨ Explore Dolanara</a>
+    </nav>
+  </main>
+
+  <footer>© 2025 Dolanara. All rights reserved.</footer>
 </body>
 </html>
