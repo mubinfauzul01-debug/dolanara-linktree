@@ -1,83 +1,92 @@
-/* Dolanara Linktree - Soft Green to Warm Beige gradient */
-:root{
-  --soft-green: #A3C9A8;
-  --dark-green: #2E4A34;
-  --beige: #F6EFE6;
-  --white: #ffffff;
+/* ================
+   DOLANARA LINKTREE STYLE
+   ================ */
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #2f4f39;
+  background: linear-gradient(-45deg, #c8e6c9, #a5d6a7, #81c784, #66bb6a);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{
-  font-family: -apple-system, BlinkMacSystemFont, "Poppins", "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  background: linear-gradient(135deg, var(--soft-green) 0%, var(--beige) 100%);
-  color:var(--dark-green);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:24px;
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
-.card{
-  width:100%;
-  max-width:420px;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(6px);
-  border-radius:18px;
-  padding:36px 24px 48px;
-  box-shadow: 0 10px 30px rgba(46,74,52,0.12);
-  text-align:center;
-  position:relative;
+
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  padding: 40px 28px;
+  border-radius: 24px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
-/* Centered logo fixed in viewport (stays in center) */
-.logo-wrap{
-  position: fixed;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 30;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  pointer-events:none;
+
+.logo {
+  width: 130px;
+  height: auto;
+  margin-bottom: 8px;
 }
-.logo-wrap img{width:120px;max-width:36vw;pointer-events:auto}
-.tagline-small{
-  margin-top:8px;
-  font-size:13px;
-  color: rgba(46,74,52,0.9);
-  background: rgba(255,255,255,0.6);
-  padding:6px 10px;
-  border-radius:999px;
-  box-shadow:0 4px 12px rgba(0,0,0,0.06);
-  pointer-events:none;
+
+.tagline-small {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #2e7d32;
+  margin-bottom: 20px;
 }
-h1.lead{
-  margin-top:92px; /* give space because logo fixed */
-  font-size:18px;
-  font-weight:600;
-  color: #0f2a1f;
+
+.lead {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
-p.lead-sub{margin:8px 0 18px;color:#2f4f3f;font-size:14px;}
-.links{display:flex;flex-direction:column;gap:12px;margin-top:10px}
-.btn{
-  display:block;
-  text-decoration:none;
-  padding:12px 16px;
-  border-radius:12px;
-  background:var(--white);
-  color:var(--dark-green);
-  font-weight:600;
-  box-shadow: 0 6px 18px rgba(46,74,52,0.08);
-  transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease;
-  text-align:center;
+
+.lead-sub {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
 }
-.btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(46,74,52,0.14);background:var(--dark-green);color:var(--white)}
-.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.22);color:var(--white)}
-footer{margin-top:20px;font-size:12px;color:rgba(46,74,52,0.6)}
-@media (max-width:480px){
-  .card{padding:24px 18px 40px;border-radius:14px}
-  .logo-wrap img{width:96px}
-  h1.lead{margin-top:76px;font-size:16px}
-  .btn{font-size:15px;padding:12px}
+
+.links a {
+  display: block;
+  background: rgba(255, 255, 255, 0.85);
+  color: #2f4f39;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 20px;
+  border-radius: 16px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+}
+
+.links a.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+footer {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #355e3b;
 }
